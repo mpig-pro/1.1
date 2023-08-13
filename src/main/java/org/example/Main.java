@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Scanner;
 
 
+
 public class Main {
 
     public static void main(String[] args) throws IOException,FileNotFoundException{
@@ -16,11 +17,11 @@ public class Main {
         ArrayList<Goods>  goods = new ArrayList<Goods>();
         ArrayList<History>  history = new ArrayList<History>();
 
-        users = ExcelIn.initUsers();
-        cart = ExcelIn.initCart();
-        client = ExcelIn.initClient();
-        goods = ExcelIn.initGoods();
-        history = ExcelIn.initHistory();
+        users = TextIn.initUsers();
+        cart = TextIn.initCart();
+        client = TextIn.initClient();
+        goods = TextIn.initGoods();
+        history = TextIn.initHistory();
         
         
         Scanner scanner = new Scanner(System.in);
@@ -99,11 +100,11 @@ public class Main {
             }
         }
 
-        ExcelOut.outUsers(users);
-        ExcelOut.outCart(cart);
-        ExcelOut.outClient(client);
-        ExcelOut.outGoods(goods);
-        ExcelOut.outHistory(history);
+        TextOut.outUsers(users);
+        TextOut.outCart(cart);
+        TextOut.outClient(client);
+        TextOut.outGoods(goods);
+        TextOut.outHistory(history);
         
         scanner.close();
         System.out.println("Done.");
